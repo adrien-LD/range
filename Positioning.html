@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 定位 -->
+    <div>
+      <div id="mydiv" style="color: cornflowerblue">
+				xxxx
+        <a>1</a>
+        <p>a</p>
+        <p>b</p>
+        <a>2</a>
+        <div>test</div>
+        <a>3</a>
+      </div>
+    </div>
+
+    <button onclick="deleteChar()">删除文字</button>
+
+    <script>
+      const div = document.getElementById("mydiv");
+
+      function deleteChar() {
+        const textNode = div.firstElementChild;
+        // console.log(textNode);
+        const range = document.createRange();
+
+        // range.setStartBefore(div);
+        // range.setEndAfter(div);
+				range.setStartAfter(div);
+        range.setEndBefore(div);
+        console.log(range);
+        console.log(range.toString());
+        range.deleteContents();
+      }
+    </script>
+  </body>
+</html>

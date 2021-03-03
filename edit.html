@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="p">这里是内容</p>
+    <button onclick="cloneRange()">克隆</button>
+    <script>
+        function cloneRange() {
+            const rangeObj=document.createRange();
+            const p=document.getElementById("p");
+            rangeObj.selectNodeContents(p)
+            const rangeClone=rangeObj.cloneRange();
+            console.log(rangeClone.toString());
+        }
+    </script> -->
+
+    <!-- <div id="div1">
+      *小萌货*
+      <br />
+      <button onclick="cloneContent()">克隆</button>
+      <br />
+    </div>
+
+    <script>
+      function cloneContent() {
+        const div = document.getElementById("div1");
+        const rangeObj = document.createRange();
+        rangeObj.selectNodeContents(div);
+        const docFrangMent = rangeObj.cloneContents();
+        div.appendChild(docFrangMent);
+      }
+    </script> -->
+
+    <!-- 
+    <div
+      id="srcDiv"
+      style="background-color: cornflowerblue; width: 300px; height: 50px"
+    >
+      么么哒
+    </div>
+    <div
+      id="disDiv"
+      style="background-color: #ff6471; width: 300px; height: 50px"
+    ></div>
+    <button onclick="moveContent()">移动元素</button>
+    <script>
+      function moveContent() {
+        const srcDiv = document.getElementById("srcDiv");
+        const disDiv = document.getElementById("disDiv");
+        const rangeObj = document.createRange();
+        rangeObj.selectNodeContents(srcDiv);
+        const docFrangment = rangeObj.extractContents();
+        disDiv.appendChild(docFrangment);
+      }
+    </script> -->
+
+    <!-- <div>
+      下雨天了怎么办，<b id="boldTest">突然</b>好想你。
+      <br />
+      <button onclick="b()">位置比较</button>
+    </div>
+
+    <script>
+      function b() {
+        const boldText = document.getElementById("boldTest");
+        const boldRange = document.createRange();
+        boldRange.selectNodeContents(boldText.firstChild);
+        const selection = document.getSelection();
+        if (selection.rangeCount > 0) {
+          const selRange = selection.getRangeAt(0);
+          if (
+            selRange.compareBoundaryPoints(Range.START_TO_END, boldRange) <= 0
+          ) {
+            console.log("选取的文字在粗体前面");
+          } else {
+            if (
+              selRange.compareBoundaryPoints(Range.END_TO_START, boldRange) >= 0
+            )
+              console.log("选取的文字在粗体的后面");
+          }
+        }
+      }
+    </script> -->
+
+    <!-- <div
+      id="div2"
+      style="background-color: cadetblue; width: 300px; height: 50px"
+    >
+      说好的幸福呢？
+    </div>
+    <button onclick="selectRangeContens()">选择元素</button>
+    <button onclick=" unselect()">取消元素</button>
+    <button onclick="showRange() ">显示Range内容</button>
+    <script>
+      const rangeObj = document.createRange();
+      function selectRangeContens() {
+        const div = document.getElementById("div");
+        rangeObj.selectNode(div);
+      }
+      function unselect() {
+        rangeObj.collapse(false);
+      }
+      function showRange() {
+        console.log(rangeObj.toString());
+      }
+    </script> -->
+
+
+
+  </body>
+</html>
